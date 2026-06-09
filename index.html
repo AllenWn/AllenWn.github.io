@@ -16,6 +16,7 @@
         <a class="brand" href="#">Ning Wei</a>
         <div class="nav-links">
           <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#teaching">Teaching</a>
@@ -30,26 +31,28 @@
           <p class="eyebrow">Computer Engineering Undergraduate · UIUC</p>
           <h1 id="intro-title">Ning Wei</h1>
           <p class="lead">
-            I am an undergraduate student in Computer Engineering at the
-            University of Illinois Urbana-Champaign, where I am a James Scholar
-            in the Grainger College of Engineering.
+            I am a senior undergraduate student in Computer Engineering at the
+            Department of Electrical and Computer Engineering, Grainger College
+            of Engineering, University of Illinois Urbana-Champaign.
           </p>
           <p>
-            My interests sit at the intersection of AI systems, embedded
-            hardware, biomedical imaging, and AI for science. I currently work
-            with the BioSensors Lab on optical imaging systems and with the
-            Assured &amp; Trustworthy AI Research Lab on LLM evaluation and
-            analog circuit design.
+            My current interests include large language models, AI for science,
+            and bio-imaging systems for surgical applications.
           </p>
           <div class="link-row" aria-label="Profile links">
             <a href="mailto:ningwei3@illinois.edu">Email</a>
             <a href="https://www.linkedin.com/in/ning-wei-allen0503">LinkedIn</a>
-            <a href="resume.md">CV</a>
+            <a href="src/NingWei_resume_En.pdf">CV</a>
+            <a href="src/魏宁简历_中.pdf">中文简历</a>
           </div>
         </div>
 
         <aside class="profile-panel" aria-label="Profile summary">
-          <div class="portrait-placeholder" aria-label="Ning Wei initials">NW</div>
+          <img
+            class="portrait"
+            src="assets/profile-photo.jpg"
+            alt="Portrait of Ning Wei"
+          >
           <dl class="facts">
             <div>
               <dt>Education</dt>
@@ -92,14 +95,15 @@
           </div>
           <div class="entry-body">
             <p>
-              Developing imaging and illumination systems for biomedical optical
-              experiments, including AR-assisted intraoperative tumor imaging,
-              laser diode control hardware, and 3D-printed optical tissue phantoms.
+              Developing components of an AR-assisted tumor localization system
+              for intraoperative surgical guidance, with work spanning laser
+              illumination control, embedded device integration, and optical
+              tissue phantom fabrication.
             </p>
             <ul>
-              <li>Building an XR-based imaging pipeline for real-time tumor region visualization under wavelength-specific illumination.</li>
-              <li>Designing a PCB-based laser illumination controller with constant-current drive, TEC thermal regulation, ESP32 firmware, power-domain control, and safety interlocks.</li>
-              <li>Fabricating resin-based tissue-mimicking optical phantoms with scattering and absorbing additives for SFDI experiments.</li>
+              <li>Contributing to an XR-based imaging workflow that captures wavelength-specific optical responses and overlays enhanced tumor-region information into an AR surgical view.</li>
+              <li>Developing an ESP32 and FreeRTOS-based control platform for a portable laser illumination device, including device state management, user interaction, multitask scheduling, safety interlocks, and closed-loop protection logic.</li>
+              <li>Fabricating resin-based optical tissue phantoms with polystyrene beads and absorbing dyes to provide repeatable test samples for optical imaging and SFDI-style experiments.</li>
             </ul>
           </div>
         </article>
@@ -112,14 +116,38 @@
           </div>
           <div class="entry-body">
             <p>
-              Working on LLM evaluation infrastructure and AI-for-science
-              workflows for analog circuit design.
+              Working on simulation-grounded LLM training and evaluation
+              workflows for analog circuit design, with a focus on turning
+              circuit generation into a testable AI-for-EDA closed loop.
             </p>
             <ul>
-              <li>Developing an automated benchmark pipeline for code generation tasks, integrating dataset management, model inference, sandboxed execution, and correctness verification.</li>
-              <li>Investigating LLMs for analog circuit design through netlist generation, SPICE simulation, supervised fine-tuning, and reinforcement learning.</li>
+              <li>Developing task definitions and automated evaluation pipelines for specification-conditioned SPICE netlist generation, including sanity checks, Bayesian optimization-based sizing, PySpice simulation, testbench execution, and metric extraction.</li>
+              <li>Investigating supervised fine-tuning and reinforcement learning methods that use simulation feedback and circuit performance rewards to improve LLM-generated analog circuit designs.</li>
             </ul>
           </div>
+        </article>
+      </section>
+
+      <section id="publications" class="section">
+        <div class="section-heading">
+          <h2>Publications</h2>
+          <p>Research manuscripts and submissions.</p>
+        </div>
+
+        <article class="publication">
+          <p class="pub-status">NeurIPS 2026 Conference Submission</p>
+          <h3>SAFTAC: Simulation-Augmented Fine-Tuning of Open-Source LLMs for Analog Circuit Design</h3>
+          <p class="authors">
+            Junsheng Huang, Yifan Sun, Zhuoer Zhang, Ning Wei, Yening Liu,
+            Michael Molter, Pavan Kumar Hanumolu, Elyse Rosenbaum, Bin Hu,
+            Huan Zhang
+          </p>
+          <p>
+            We introduce a simulation-grounded dataset and fine-tuning framework
+            for analog circuit design, enabling open-source LLMs to generate and
+            revise specification-conditioned circuit designs using SPICE-based
+            feedback.
+          </p>
         </article>
       </section>
 
@@ -134,9 +162,9 @@
             <h3>Deep Learning Algorithm Intern</h3>
             <p class="subtle">Yuanli AI Co., Ltd. · Natural Language Processing Lab · Jun 2025 - Aug 2025</p>
             <p>
-              Explored post-training for education-domain LLMs, including
-              continued pre-training, supervised fine-tuning, sparse expert
-              inference optimization, and a math problem-solving visualization pipeline.
+              Worked on education-domain LLM post-training and explored a
+              math problem-solving visualization pipeline that converts model
+              reasoning into structured drawing instructions and programmatic renderings.
             </p>
           </article>
 
@@ -144,9 +172,9 @@
             <h3>AI Remote Sensing Data Engineering Intern</h3>
             <p class="subtle">SuperMap Software Co., Ltd. · May 2025 - Jun 2025</p>
             <p>
-              Researched semantic change detection methods, reproduced
-              representative open-source models, and benchmarked performance
-              across remote sensing datasets.
+              Researched semantic change detection methods for remote sensing
+              applications, reproduced representative models such as
+              ChangeFormer, and evaluated cross-dataset generalization.
             </p>
           </article>
 
@@ -154,8 +182,9 @@
             <h3>Machine Learning Engineering Intern</h3>
             <p class="subtle">IQIYI Inc. · Jun 2024 - Aug 2024</p>
             <p>
-              Worked on text-to-video generation, pose-controlled synthesis,
-              video preprocessing, and OpenSora-based training pipeline optimization.
+              Worked on pose-controlled text-to-video generation for film and
+              media production scenarios, including pose-keypoint data
+              construction and OpenSora / DiT-style training pipeline adaptation.
             </p>
           </article>
 
@@ -177,6 +206,27 @@
         </div>
 
         <div class="project-grid">
+          <article class="project-card">
+            <p class="tag">Bioimaging · Python · Microscopy</p>
+            <h3>CocoFluo Cell Fluorescence Image Analysis System</h3>
+            <p>
+              Built an automated pipeline for multi-channel .tif fluorescence
+              microscopy images, including DAPI-based segmentation, marker
+              signal extraction, single-cell expression calls, co-localization
+              statistics, CSV outputs, and visual quality-control samples.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <p class="tag">Embedded Systems · RTOS · Control</p>
+            <h3>Biped Self-Balancing Robot Control</h3>
+            <p>
+              Designed an embedded real-time control system for a self-balancing
+              biped robot, coordinating sensor acquisition, attitude estimation,
+              periodic control tasks, filtering, and PID-based motor output.
+            </p>
+          </article>
+
           <article class="project-card">
             <p class="tag">FPGA · Graphics · Systems</p>
             <h3>FPGA-Based HDMI Graphics Gaming System</h3>
@@ -280,6 +330,8 @@
         <div class="link-row">
           <a href="mailto:ningwei3@illinois.edu">ningwei3@illinois.edu</a>
           <a href="https://www.linkedin.com/in/ning-wei-allen0503">LinkedIn</a>
+          <a href="src/NingWei_resume_En.pdf">CV</a>
+          <a href="src/魏宁简历_中.pdf">中文简历</a>
         </div>
       </section>
     </main>
