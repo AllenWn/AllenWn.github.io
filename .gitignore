@@ -1,3 +1,5 @@
 # Keep original personal photos out of the public GitHub Pages repository.
 # The site uses the stripped, resized copy at assets/profile-photo.jpg.
 assets/profie/
+assets/*.heic
+.DS_Store

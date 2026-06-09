@@ -164,7 +164,7 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 50%;
   object-fit: cover;
-  object-position: 50% 56%;
+  object-position: center;
 }
 
 .facts {
