@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assured &amp; Trustworthy AI Research Lab · Ning Wei</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="../index.html">Ning Wei</a>
+        <div class="nav-links">
+          <a href="../index.html#research">Research</a>
+          <a href="../index.html#publications">Publications</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <header class="detail-header">
+        <a class="back-link" href="../index.html#research">← Back to Research</a>
+        <p class="detail-meta">Research · UIUC CS · Advisor: Prof. Huan Zhang · Jan 2026 - Present</p>
+        <h1>Simulation-Augmented LLMs for Analog Circuit Design</h1>
+      </header>
+
+      <section class="detail-section">
+        <h2>Overview</h2>
+        <p>
+          This project explores the use of large language models for automated analog circuit and integrated circuit design. Analog circuit design traditionally requires substantial expertise from circuit designers, who need to translate design specifications into circuit topologies, select device connections, tune transistor sizing parameters, and repeatedly verify performance through SPICE simulation. This process is highly specialized, time-consuming, and difficult to fully automate.
+        </p>
+        <p>
+          Our goal is to develop a simulation-augmented AI for EDA pipeline where large language models can generate SPICE netlists from natural language circuit specifications and improve their designs based on simulation feedback. Instead of treating circuit generation as a pure text-generation task, this project connects LLM outputs with real circuit simulation, performance evaluation, and feedback-driven model training. The long-term goal is to train domain-specialized LLMs that can not only produce syntactically valid circuit descriptions, but also generate circuits that are functionally meaningful and performance-aware.
+        </p>
+      </section>
+
+      <!-- Closed-loop Circuit Evaluation Pipeline
+
+A major part of the project is building an automated evaluation pipeline for LLM-generated analog circuits. Each task begins with a natural language circuit design requirement, such as designing an amplifier, current mirror, inverter, adder, or subtractor under specific design constraints. The model is expected to output a SPICE netlist that describes the corresponding circuit topology.
+
+The generated netlist is then processed through a closed-loop evaluation system. First, the design undergoes sanity checks to identify syntax errors, invalid device connections, topology issues, and basic simulation feasibility problems. If the circuit passes the initial checks, the system performs Bayesian optimization-based sizing to search for suitable device parameters under different design conditions. The resulting circuit is then evaluated using PySpice/SPICE testbenches, which extract key performance metrics such as gain, bandwidth, power consumption, stability, output behavior, and other circuit-specific specifications.
+
+This evaluation pipeline allows us to move beyond surface-level text matching and directly measure whether an LLM-generated circuit can be simulated and whether it satisfies the intended design requirements.
+
+Simulation Feedback and Model Optimization
+
+Beyond evaluation, the project uses simulation results as a foundation for model improvement. We organize sanity check outputs, simulation errors, sizing results, and performance gaps into structured feedback messages. These feedback signals help the model understand why a circuit fails, whether the issue comes from topology, device connections, invalid netlist syntax, failed simulation, or insufficient performance.
+
+The training framework includes both supervised fine-tuning and reinforcement learning. In the supervised fine-tuning stage, we train open-source Qwen-based models on curated analog circuit design examples, SPICE netlist representations, and feedback-based revision data. This helps the model learn circuit knowledge, common topology patterns, netlist syntax, and how to revise an initial design based on diagnostic feedback.
+
+In the reinforcement learning stage, SPICE simulation results are used to construct reward signals. Designs that successfully simulate and better satisfy target specifications receive higher rewards, while invalid topologies, failed simulations, or underperforming circuits receive lower rewards or penalties. This enables the model to optimize toward circuits that are not only textually plausible, but also more likely to pass simulation and meet performance requirements.
+
+Research Significance
+
+This project studies how large language models can be integrated with domain-specific simulators to solve scientific and engineering design problems. For analog circuit design, the key challenge is that correctness cannot be judged only from generated text; a circuit must be simulated, sized, and evaluated against physical and electrical performance requirements.
+
+By combining LLM generation, automated SPICE simulation, Bayesian optimization-based sizing, feedback construction, supervised fine-tuning, and reinforcement learning, this project forms a closed-loop framework for simulation-grounded model improvement. The core idea is to make analog circuit generation not only a language modeling problem, but also an evaluable and optimizable AI for EDA task. -->
+      
+<section class="detail-section">
+        <h2>To Fill Later</h2>
+        <p class="placeholder-note">
+          Add benchmark pipeline diagrams, dataset details, feedback format,
+          training setup, evaluation metrics, and your specific contributions.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

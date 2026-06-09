@@ -15,11 +15,12 @@
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="#">Ning Wei</a>
         <div class="nav-links">
-          <a href="#research">Research</a>
           <a href="#publications">Publications</a>
-          <a href="#experience">Experience</a>
+          <a href="#research">Research</a>
+          <a href="#internships">Internships</a>
           <a href="#projects">Projects</a>
-          <a href="#teaching">Teaching</a>
+          <a href="#course-projects">Course Projects</a>
+          <a href="#involvement">Involvement</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -28,6 +29,11 @@
     <main>
       <section class="hero" aria-labelledby="intro-title">
         <div class="hero-text">
+          <!-- <img
+            class="hero-banner"
+            src="assets/profile/UIUC_banner2.png"
+            alt="University of Illinois Urbana-Champaign banner"
+          > -->
           <p class="eyebrow">Computer Engineering Undergraduate · UIUC</p>
           <h1 id="intro-title">Ning Wei</h1>
           <p class="lead">
@@ -75,69 +81,18 @@
         </aside>
       </section>
 
-      <section class="visual-band" aria-label="Research visual">
-        <img
-          src="assets/research-desk.png"
-          alt="Academic research desk with circuit hardware, optical components, and AI systems materials"
-        >
-      </section>
-
-      <section id="research" class="section">
-        <div class="section-heading">
-          <h2>Research</h2>
-          <p>Current work across biomedical imaging hardware and trustworthy AI systems.</p>
-        </div>
-
-        <article class="entry">
-          <div class="entry-meta">
-            <h3>BioSensors Lab</h3>
-            <p>UIUC ECE · Advisor: Prof. Viktor Gruev</p>
-            <span>Jan 2026 - Present</span>
-          </div>
-          <div class="entry-body">
-            <p>
-              Developing components of an AR-assisted tumor localization system
-              for intraoperative surgical guidance, with work spanning laser
-              illumination control, embedded device integration, and optical
-              tissue phantom fabrication.
-            </p>
-            <ul>
-              <li>Contributing to an XR-based imaging workflow that captures wavelength-specific optical responses and overlays enhanced tumor-region information into an AR surgical view.</li>
-              <li>Developing an ESP32 and FreeRTOS-based control platform for a portable laser illumination device, including device state management, user interaction, multitask scheduling, safety interlocks, and closed-loop protection logic.</li>
-              <li>Fabricating resin-based optical tissue phantoms with polystyrene beads and absorbing dyes to provide repeatable test samples for optical imaging and SFDI-style experiments.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div class="entry-meta">
-            <h3>Assured &amp; Trustworthy AI Research Lab</h3>
-            <p>UIUC CS · Advisor: Prof. Huan Zhang</p>
-            <span>Jan 2026 - Present</span>
-          </div>
-          <div class="entry-body">
-            <p>
-              Working on simulation-grounded LLM training and evaluation
-              workflows for analog circuit design, with a focus on turning
-              circuit generation into a testable AI-for-EDA closed loop.
-            </p>
-            <ul>
-              <li>Developing task definitions and automated evaluation pipelines for specification-conditioned SPICE netlist generation, including sanity checks, Bayesian optimization-based sizing, PySpice simulation, testbench execution, and metric extraction.</li>
-              <li>Investigating supervised fine-tuning and reinforcement learning methods that use simulation feedback and circuit performance rewards to improve LLM-generated analog circuit designs.</li>
-            </ul>
-          </div>
-        </article>
-      </section>
-
       <section id="publications" class="section">
         <div class="section-heading">
           <h2>Publications</h2>
-          <p>Research manuscripts and submissions.</p>
         </div>
 
         <article class="publication">
           <p class="pub-status">NeurIPS 2026 Conference Submission</p>
-          <h3>SAFTAC: Simulation-Augmented Fine-Tuning of Open-Source LLMs for Analog Circuit Design</h3>
+          <h3>
+            <a class="title-link" href="details/saftac.html">
+              SAFTAC: Simulation-Augmented Fine-Tuning of Open-Source LLMs for Analog Circuit Design
+            </a>
+          </h3>
           <p class="authors">
             Junsheng Huang, Yifan Sun, Zhuoer Zhang, Ning Wei, Yening Liu,
             Michael Molter, Pavan Kumar Hanumolu, Elyse Rosenbaum, Bin Hu,
@@ -152,15 +107,80 @@
         </article>
       </section>
 
-      <section id="experience" class="section">
+      <section id="research" class="section">
         <div class="section-heading">
-          <h2>Experience</h2>
-          <p>Industry and university work in machine learning, data engineering, and software systems.</p>
+          <h2>Research</h2>
+        </div>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <h3><a class="title-link" href="details/biosensors-lab.html">BioSensors Lab</a></h3>
+            <p>UIUC ECE</p>
+            <p>Advisor: Prof. Viktor Gruev</p>
+            <span>Jan 2026 - Present</span>
+            <a class="entry-image-link" href="details/biosensors-lab.html" aria-label="Open BioSensors Lab project page">
+              <img
+                class="entry-thumbnail"
+                src="assets/research/biosensor1.JPG"
+                alt="Intraoperative optical imaging system being used during surgery"
+              >
+            </a>
+          </div>
+          <div class="entry-body">
+            <h4 class="entry-project-title">
+              <a class="title-link" href="details/biosensors-lab.html">
+                AR-Guided Tumor Imaging System for Surgical Navigation
+              </a>
+            </h4>
+            <p>
+             Our lab is developing an augmented reality tumor imaging system that combines wavelength-specific optical illumination, biomedical imaging, real-time image processing, and AR visualization to assist surgeons in identifying tumor regions and boundaries during surgery.
+            </p>
+            <ul>
+              <li>Laser Illumination Control System: Developed ESP32-based FreeRTOS firmware for a portable laser illumination device, including laser control, device state management, power-domain coordination, user interaction, safety interlocks, and real-time monitoring.</li>
+              <li>3D-Printed Optical Tissue Phantoms: Designed and fabricated resin-based tissue phantoms with tunable scattering and absorption properties using polystyrene beads and optical dyes, enabling repeatable calibration and validation of bio-optical imaging systems.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <h3><a class="title-link" href="details/trustworthy-ai-lab.html">Assured &amp; Trustworthy AI Research Lab</a></h3>
+            <p>UIUC CS</p>
+            <p>Advisor: Prof. Huan Zhang</p>
+            <span>Jan 2026 - Present</span>
+            <a class="entry-image-link" href="details/trustworthy-ai-lab.html" aria-label="Open Assured and Trustworthy AI Research Lab project page">
+              <img
+                class="entry-thumbnail entry-thumbnail-square"
+                src="assets/research/LLM1.png"
+                alt="Simulation-augmented LLM workflow for analog circuit design"
+              >
+            </a>
+          </div>
+          <div class="entry-body">
+            <h4 class="entry-project-title">
+              <a class="title-link" href="details/trustworthy-ai-lab.html">
+                Simulation-Augmented LLMs for Analog Circuit Design
+              </a>
+            </h4>
+            <p>
+              This project investigates large language models for automated analog circuit design. We develop a closed-loop AI for EDA pipeline where LLMs generate SPICE netlists from natural language specifications, circuits are evaluated through sanity checks, Bayesian optimization-based sizing, and PySpice/SPICE simulations, and the resulting feedback is used to improve model behavior through supervised fine-tuning and reinforcement learning.
+            </p>
+            <ul>
+              <li>Closed-loop Circuit Evaluation Pipeline: Built an automated evaluation system for LLM-generated analog circuits, including SPICE netlist generation, sanity checks, topology validation, Bayesian optimization-based sizing, PySpice/SPICE testbench simulation, and extraction of performance metrics such as gain, bandwidth, power, stability, and output behavior.</li>
+              <li>Feedback-driven LLM Training: Transformed simulation errors, sizing results, sanity check outputs, and performance metric gaps into feedback signals for model optimization. The pipeline supports supervised fine-tuning for circuit generation and revision, as well as reinforcement learning using SPICE simulation results as reward signals.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section id="internships" class="section">
+        <div class="section-heading">
+          <h2>Internships</h2>
         </div>
 
         <div class="timeline">
           <article class="compact-entry">
-            <h3>Deep Learning Algorithm Intern</h3>
+            <h3><a class="title-link" href="details/yuanli-ai.html">Deep Learning Algorithm Intern</a></h3>
             <p class="subtle">Yuanli AI Co., Ltd. · Natural Language Processing Lab · Jun 2025 - Aug 2025</p>
             <p>
               Worked on education-domain LLM post-training and explored a
@@ -170,7 +190,7 @@
           </article>
 
           <article class="compact-entry">
-            <h3>AI Remote Sensing Data Engineering Intern</h3>
+            <h3><a class="title-link" href="details/supermap.html">AI Remote Sensing Data Engineering Intern</a></h3>
             <p class="subtle">SuperMap Software Co., Ltd. · May 2025 - Jun 2025</p>
             <p>
               Researched semantic change detection methods for remote sensing
@@ -180,7 +200,7 @@
           </article>
 
           <article class="compact-entry">
-            <h3>Machine Learning Engineering Intern</h3>
+            <h3><a class="title-link" href="details/iqiyi.html">Machine Learning Engineering Intern</a></h3>
             <p class="subtle">IQIYI Inc. · Jun 2024 - Aug 2024</p>
             <p>
               Worked on pose-controlled text-to-video generation for film and
@@ -190,7 +210,7 @@
           </article>
 
           <article class="compact-entry">
-            <h3>Software Engineer Intern</h3>
+            <h3><a class="title-link" href="details/timeloit.html">Software Engineer Intern</a></h3>
             <p class="subtle">Timeloit Technology Company · May 2023 - Aug 2023</p>
             <p>
               Improved business middle-office architecture through modularization,
@@ -203,13 +223,12 @@
       <section id="projects" class="section">
         <div class="section-heading">
           <h2>Projects</h2>
-          <p>Selected systems, hardware, AI, and full-stack projects.</p>
         </div>
 
         <div class="project-grid">
           <article class="project-card">
             <p class="tag">Bioimaging · Python · Microscopy</p>
-            <h3>CocoFluo Cell Fluorescence Image Analysis System</h3>
+            <h3><a class="title-link" href="details/cocofluo.html">CocoFluo Cell Fluorescence Image Analysis System</a></h3>
             <p>
               Built an automated pipeline for multi-channel .tif fluorescence
               microscopy images, including DAPI-based segmentation, marker
@@ -219,48 +238,8 @@
           </article>
 
           <article class="project-card">
-            <p class="tag">Embedded Systems · RTOS · Control</p>
-            <h3>Biped Self-Balancing Robot Control</h3>
-            <p>
-              Designed an embedded real-time control system for a self-balancing
-              biped robot, coordinating sensor acquisition, attitude estimation,
-              periodic control tasks, filtering, and PID-based motor output.
-            </p>
-          </article>
-
-          <article class="project-card">
-            <p class="tag">FPGA · Graphics · Systems</p>
-            <h3>FPGA-Based HDMI Graphics Gaming System</h3>
-            <p>
-              Designed a real-time 640x480 HDMI graphics pipeline in
-              SystemVerilog with tile rendering, sprite overlay, obstacle
-              scrolling, and MicroBlaze-controlled game logic.
-            </p>
-          </article>
-
-          <article class="project-card">
-            <p class="tag">RISC-V · OS · Kernel</p>
-            <h3>Custom RISC-V Operating System Kernel</h3>
-            <p>
-              Implemented a UNIX-like kernel with process creation, ELF loading,
-              system calls, user-level shell, virtual memory, page faults,
-              Copy-on-Write fork, and VirtIO block I/O.
-            </p>
-          </article>
-
-          <article class="project-card">
-            <p class="tag">FastAPI · MySQL · React</p>
-            <h3>Course &amp; Team Matching Platform</h3>
-            <p>
-              Built a full-stack course discovery and team formation platform
-              with REST APIs, authentication, transactional updates, relational
-              queries, indexes, triggers, and stored procedures.
-            </p>
-          </article>
-
-          <article class="project-card">
             <p class="tag">ML · Time Series</p>
-            <h3>Stock Market Prediction Model</h3>
+            <h3><a class="title-link" href="details/stock-market-prediction.html">Stock Market Prediction Model</a></h3>
             <p>
               Modeled stock trends with LSTM and Transformer architectures,
               technical indicators, and training strategies for forecasting and
@@ -270,33 +249,83 @@
 
           <article class="project-card">
             <p class="tag">Flutter · LLM App</p>
-            <h3>AI-Assisted Email Assistant</h3>
+            <h3><a class="title-link" href="details/ai-email-assistant.html">AI-Assisted Email Assistant</a></h3>
             <p>
               Developed an iOS email assistant using Flutter and ChatGPT API for
               automated email classification, content analysis, and response generation.
             </p>
           </article>
+        </div>
+      </section>
+
+      <section id="course-projects" class="section">
+        <div class="section-heading">
+          <h2>Course Projects</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <p class="tag">Embedded Systems · RTOS · Control</p>
+            <h3><a class="title-link" href="details/biped-robot.html">Biped Self-Balancing Robot Control</a></h3>
+            <p>
+              Designed an embedded real-time control system for a self-balancing
+              biped robot, coordinating sensor acquisition, attitude estimation,
+              periodic control tasks, filtering, and PID-based motor output.
+            </p>
+          </article>
 
           <article class="project-card">
-            <p class="tag">Community · Web Systems</p>
-            <h3>UIUC CSSA Technology Work</h3>
+            <p class="tag">FPGA · Graphics · Systems</p>
+            <h3><a class="title-link" href="details/fpga-hdmi-game.html">FPGA-Based HDMI Graphics Gaming System</a></h3>
             <p>
-              Supported IT infrastructure and developed online service,
-              website, forum, and event management systems for UIUC CSSA.
+              Designed a real-time 640x480 HDMI graphics pipeline in
+              SystemVerilog with tile rendering, sprite overlay, obstacle
+              scrolling, and MicroBlaze-controlled game logic.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <p class="tag">RISC-V · OS · Kernel</p>
+            <h3><a class="title-link" href="details/riscv-os-kernel.html">Custom RISC-V Operating System Kernel</a></h3>
+            <p>
+              Implemented a UNIX-like kernel with process creation, ELF loading,
+              system calls, user-level shell, virtual memory, page faults,
+              Copy-on-Write fork, and VirtIO block I/O.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <p class="tag">FastAPI · MySQL · React</p>
+            <h3><a class="title-link" href="details/course-team-matching.html">Course &amp; Team Matching Platform</a></h3>
+            <p>
+              Built a full-stack course discovery and team formation platform
+              with REST APIs, authentication, transactional updates, relational
+              queries, indexes, triggers, and stored procedures.
             </p>
           </article>
         </div>
       </section>
 
-      <section id="teaching" class="section">
+      <section class="section skills-section">
         <div class="section-heading">
-          <h2>Teaching &amp; Service</h2>
-          <p>Course support and campus technical service.</p>
+          <h2>Technical Skills</h2>
+        </div>
+        <div class="skill-list">
+          <p><strong>Languages:</strong> C, C++, Python, Java, RISC-V Assembly, LC-3 Assembly</p>
+          <p><strong>AI &amp; software:</strong> PyTorch, FastAPI, React, Flutter, Docker, MySQL, MATLAB, Git</p>
+          <p><strong>Hardware:</strong> SystemVerilog, Verilog, PlatformIO, Altium Designer, FPGA design, Vivado, Vitis</p>
+          <p><strong>CAD:</strong> SolidWorks, Siemens NX</p>
+        </div>
+      </section>
+
+      <section id="involvement" class="section">
+        <div class="section-heading">
+          <h2>Involvement</h2>
         </div>
 
         <article class="entry">
           <div class="entry-meta">
-            <h3>CS124 Course Associate</h3>
+            <h3><a class="title-link" href="details/cs124-course-associate.html">CS124 Course Associate</a></h3>
             <p>University of Illinois Urbana-Champaign · Computer Science Department</p>
             <span>Jan 2024 - Jun 2024</span>
           </div>
@@ -307,19 +336,20 @@
             </p>
           </div>
         </article>
-      </section>
 
-      <section class="section skills-section">
-        <div class="section-heading">
-          <h2>Technical Skills</h2>
-          <p>Tools and systems I use across software, AI, and hardware projects.</p>
-        </div>
-        <div class="skill-list">
-          <p><strong>Languages:</strong> C, C++, Python, Java, RISC-V Assembly, LC-3 Assembly</p>
-          <p><strong>AI &amp; software:</strong> PyTorch, FastAPI, React, Flutter, Docker, MySQL, MATLAB, Git</p>
-          <p><strong>Hardware:</strong> SystemVerilog, Verilog, PlatformIO, Altium Designer, FPGA design, Vivado, Vitis</p>
-          <p><strong>CAD:</strong> SolidWorks, Siemens NX</p>
-        </div>
+        <article class="entry">
+          <div class="entry-meta">
+            <h3><a class="title-link" href="details/uiuc-cssa.html">Network Technology Department Member</a></h3>
+            <p>UIUC Chinese Students and Scholars Association</p>
+            <span>Feb 2024 - Present</span>
+          </div>
+          <div class="entry-body">
+            <p>
+              Supported IT infrastructure and developed online service,
+              website, forum, and event management systems for UIUC CSSA.
+            </p>
+          </div>
+        </article>
       </section>
 
       <section id="contact" class="section contact-section">

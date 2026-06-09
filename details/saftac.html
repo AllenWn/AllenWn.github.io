@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SAFTAC · Ning Wei</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="../index.html">Ning Wei</a>
+        <div class="nav-links">
+          <a href="../index.html#publications">Publications</a>
+          <a href="../index.html#research">Research</a>
+          <a href="../index.html#projects">Projects</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <header class="detail-header">
+        <a class="back-link" href="../index.html#publications">← Back to Publications</a>
+        <p class="detail-meta">Publication · NeurIPS 2026 Conference Submission</p>
+        <h1>SAFTAC: Simulation-Augmented Fine-Tuning of Open-Source LLMs for Analog Circuit Design</h1>
+        <p class="detail-lead">
+          A simulation-grounded dataset and fine-tuning framework for analog
+          circuit design, enabling open-source LLMs to generate and revise
+          specification-conditioned circuit designs using SPICE-based feedback.
+        </p>
+      </header>
+
+      <section class="detail-section">
+        <h2>Authors</h2>
+        <p>
+          Junsheng Huang, Yifan Sun, Zhuoer Zhang, Ning Wei, Yening Liu,
+          Michael Molter, Pavan Kumar Hanumolu, Elyse Rosenbaum, Bin Hu,
+          Huan Zhang.
+        </p>
+      </section>
+
+      <section class="detail-section">
+        <h2>Abstract</h2>
+        <p>
+          Circuit design for analog integrated circuits (ICs) is challenging because circuit topology, device sizing, and circuit performance are tightly coupled. Existing large language model (LLM)-based methods either rely on inference-time correction around frozen models or train on limited circuit types without directly using simulation outcomes as training signals. A key bottleneck is that existing datasets do not provide sufficient task information for training LLMs on end-to-end specification-conditioned design. To fill this gap, we first construct a large-scale simulation-grounded dataset with 8,626 design tasks across 10 different types of analog circuits, where each task includes a textual description, labeled I/O ports, loading condition, target specifications, a testbench, and a reference netlist. Using this dataset, we present SAFTAC, a simulation-augmented fine-tuning framework that trains LLMs to generate and revise analog circuit design. SAFTAC combines three-stage supervised fine-tuning, which progressively builds the capabilities required for analog circuit design and feedback-guided correction, with simulation feedback-augmented reinforcement fine-tuning, which further optimizes models using simulation-grounded rewards. We evaluate SAFTAC under single-pass generation and two-pass generation with simulation feedback, showing improvements over the strongest closed-source LLM by 15.9% and 7.8%, respectively.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

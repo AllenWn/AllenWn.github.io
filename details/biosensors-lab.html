@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BioSensors Lab · Ning Wei</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="../index.html">Ning Wei</a>
+        <div class="nav-links">
+          <a href="../index.html#research">Research</a>
+          <a href="../index.html#publications">Publications</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <header class="detail-header">
+        <a class="back-link" href="../index.html#research">← Back to Research</a>
+        <p class="detail-meta">Research · UIUC ECE · Advisor: Prof. Viktor Gruev · Jan 2026 - Present</p>
+        <h1>AR-Guided Tumor Imaging System for Surgical Navigation</h1>
+        <p class="detail-lead">
+          Our lab is developing an augmented reality tumor imaging system that combines wavelength-specific optical illumination, biomedical imaging, real-time image processing, and AR visualization to assist surgeons in identifying tumor regions and boundaries during surgery.
+        </p>
+      </header>
+
+      <section class="detail-section">
+        <h2>Project Overview</h2>
+        <p>
+          Our lab is developing an augmented reality tumor imaging system for intraoperative surgical guidance. The goal of this project is to help surgeons identify tumor locations and boundaries in real time during tumor resection. By combining wavelength-specific optical illumination, biomedical imaging sensors, image processing, and AR-based visualization, the system aims to provide intuitive visual guidance directly in the surgical field.
+        </p>
+        <p>
+          The system is built around the optical differences between tumor tissue and normal tissue. Under selected illumination wavelengths, biological tissues may exhibit different absorption, scattering, reflection, or fluorescence responses. By capturing and enhancing these optical signals, the system can improve tissue contrast and support real-time tumor localization. The long-term goal is to build an integrated surgical navigation pipeline from optical excitation and image acquisition to image analysis and AR visualization.
+        </p>
+
+        <figure class="detail-figure">
+          <img
+            class="detail-image"
+            src="../assets/research/biosensor1.JPG"
+            alt="Clinical demonstration of optical illumination during surgery"
+          >
+          <figcaption>
+             Clinical setup for intraoperative optical imaging and surgical guidance.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="detail-section">
+        <h2>Laser Illumination Control System</h2>
+        <p>
+          One part of my work focuses on the laser illumination subsystem, which provides controlled optical excitation for the imaging pipeline. The illumination device needs to be portable, low-cost, and easy to operate, especially for potential deployment in resource-limited medical environments. In this subproject, I worked on the embedded control system and device-level integration for the laser illumination platform.
+        </p>
+        <p>
+        I developed ESP32-based firmware using FreeRTOS to support laser control, device state management, user interaction, power-domain coordination, and real-time system monitoring. I also implemented safety-related control logic, including abnormal-state detection and safety interlock mechanisms, to improve the stability and reliability of the device in biomedical imaging scenarios.
+        </p>
+
+        <div class="detail-media-grid">
+          <figure>
+            <img
+              src="../assets/research/biosensor4.JPG"
+              alt="CAD model of a portable laser illumination device"
+            >
+            <figcaption>
+              Portable laser illumination module and device integration design.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="detail-media-grid two-up">
+          <figure>
+            <img
+              src="../assets/research/biosensor2.png"
+              alt="Portable laser illumination control hardware prototype"
+            >
+            <figcaption>
+              Laser illumination control hardware prototype.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../assets/research/biosensor3.png"
+              alt="Embedded control interface for the laser illumination system"
+            >
+            <figcaption>
+              Embedded control interface and device integration.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>3D-Printed Optical Tissue Phantoms</h2>
+        <p>
+          Another part of my work involves developing optical tissue phantoms for system calibration and validation. Tissue phantoms are artificial tissue-like models that simulate selected optical properties of biological tissue, such as absorption and scattering. They provide a repeatable and controllable testing platform for evaluating illumination hardware, imaging sensors, and image processing methods before experiments with real biological samples.
+        </p>
+        <p>
+          In this subproject, I designed and fabricated resin-based optical phantoms using 3D printing. I tuned their optical responses by adding polystyrene beads to control scattering and optical dyes to adjust absorption. I also worked on material preparation, vacuum degassing, sample printing, and iterative testing with lab imaging equipment, with the goal of producing standardized tissue-like targets for bio-optical imaging experiments.
+        </p>
+
+        <div class="detail-media-grid two-up">
+          <figure>
+            <img
+              src="../assets/research/biosensor5.PNG"
+              alt="3D-print preparation layout for optical tissue phantom samples"
+            >
+            <figcaption>
+              3D-print preparation layout for tissue phantom fabrication.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../assets/research/biosensor6.JPG"
+              alt="Fabricated optical tissue phantom samples in the lab"
+            >
+            <figcaption>
+              Fabricated optical tissue phantom samples for imaging tests.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
