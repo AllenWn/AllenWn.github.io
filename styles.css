@@ -330,6 +330,42 @@ li + li {
   border-bottom: 0;
 }
 
+.intern-entry {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.intern-logo {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin-top: 2px;
+  padding: 8px;
+  border: 1px solid var(--soft-line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.intern-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.intern-content {
+  min-width: 0;
+}
+
+.intern-project-title {
+  margin: 10px 0 6px;
+  font-size: 17px;
+  line-height: 1.35;
+  font-weight: 720;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -535,6 +571,17 @@ figcaption {
 
   .entry-thumbnail {
     max-width: 320px;
+  }
+
+  .intern-entry {
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .intern-logo {
+    width: 56px;
+    height: 56px;
+    padding: 7px;
   }
 
   .detail-media-grid.two-up {
