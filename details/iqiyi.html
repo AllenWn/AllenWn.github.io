@@ -16,21 +16,26 @@
     <main class="detail-main">
       <header class="detail-header">
         <a class="back-link" href="../index.html#internships">← Back to Internships</a>
-        <p class="detail-meta">Internship · IQIYI Inc. · Jun 2024 - Aug 2024</p>
-        <h1>Machine Learning Engineering Intern</h1>
+        <p class="detail-meta">Internship · Machine Learning Engineering Intern · IQIYI Inc. · Jun 2024 - Aug 2024</p>
+        <h1>Pose-Controlled Diffusion Transformers for Text-to-Video Generation</h1>
         <p class="detail-lead">
-          Worked on pose-controlled text-to-video generation for film and media
-          production scenarios, including pose-keypoint data construction and
-          OpenSora / DiT-style training pipeline adaptation.
+          Exploring controllable text-to-video generation for film and media production, focusing on integrating skeleton-pose sequences into diffusion-based video generation pipelines to improve motion controllability, pose alignment, and temporal consistency. 
         </p>
       </header>
       <section class="detail-section">
-        <h2>To Fill Later</h2>
-        <p class="placeholder-note">
-          Add model background, data preprocessing workflow, pose extraction,
-          ControlNet-style conditioning, training pipeline changes, and examples.
+        <p>
+          This internship focused on controllable AI video generation for film and media production scenarios. While text-to-video models can generate video content from natural language prompts, text alone is often insufficient for controlling human motion, pose alignment, action rhythm, and temporal consistency. For film and content production, these controllability requirements are important because generated clips need to follow specific character movements and visual structures rather than only matching a general text description.
         </p>
-      </section>
+        <p>
+          The work explored pose-controlled video generation based on the OpenSora / Open-Sora framework. The overall generation pipeline followed a diffusion-based text-to-video approach with a Diffusion Transformer-style architecture for modeling spatial and temporal video features. To improve controllability, the project incorporated skeleton-pose sequences as additional structural conditions, inspired by ControlNet-style conditioning methods. These pose signals were used to guide the generated video toward desired human motion patterns while preserving the text-conditioned generation capability.
+        </p>
+        <p>
+          A major part of the workflow involved preparing pose-conditioned training data from video materials. Human keypoints were extracted from selected video clips using computer vision tools, covering body, face, eye, and mouth landmarks when applicable. The extracted frame-level keypoints were then re-rendered into skeleton-pose videos aligned with the original video timeline, forming paired training samples consisting of text descriptions, original videos, and pose-control videos.
+        </p>
+        <p>
+          The project aimed to evaluate whether structured visual control signals could improve motion controllability and temporal consistency in text-to-video generation. By combining pose-conditioned data construction with modifications to the OpenSora training and generation pipeline, this work provided early technical validation for AI-assisted video production, character motion control, and controllable media generation applications.
+        </p>
+        </section>
     </main>
   </body>
 </html>

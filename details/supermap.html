@@ -16,21 +16,26 @@
     <main class="detail-main">
       <header class="detail-header">
         <a class="back-link" href="../index.html#internships">← Back to Internships</a>
-        <p class="detail-meta">Internship · SuperMap Software Co., Ltd. · May 2025 - Jun 2025</p>
-        <h1>AI Remote Sensing Data Engineering Intern</h1>
+        <p class="detail-meta">Internship · AI Remote Sensing Data Engineering Intern · SuperMap Software Co., Ltd. · May 2025 - Jun 2025</p>
+        <h1>Deep Learning-based Semantic Change Detection for Remote Sensing Imagery</h1>
         <p class="detail-lead">
-          Researched semantic change detection methods for remote sensing
-          applications, reproduced representative models, and evaluated
-          cross-dataset generalization.
+          Investigating deep learning models for semantic change detection in bi-temporal remote sensing imagery, with emphasis on reproducing and evaluating representative architectures across public datasets and assessing their potential for GIS and remote sensing applications.
         </p>
       </header>
-      <section class="detail-section">
-        <h2>To Fill Later</h2>
-        <p class="placeholder-note">
-          Add datasets, reproduced models, training setup, metrics, model
-          comparison tables, and business migration analysis.
+            <section class="detail-section">
+        <p>
+          This internship focused on semantic change detection for bi-temporal remote sensing imagery in GIS and remote sensing analysis scenarios. Many real-world applications, such as urban management, land resource monitoring, illegal construction detection, vegetation change analysis, and land-use monitoring, require comparing satellite or aerial images captured at different times. Unlike simple pixel-level differencing, semantic change detection aims to identify whether meaningful objects such as buildings, roads, vegetation, or water areas have truly changed under variations in viewpoint, lighting, season, sensor conditions, and imaging noise.
         </p>
-      </section>
+        <p>
+          The work involved investigating recent deep learning methods for remote sensing change detection and evaluating their potential for integration into practical GIS products. The study covered major modeling paradigms, including Siamese networks for dual-temporal feature extraction, early-fusion architectures for joint image modeling, attention-based and Transformer-based methods for global change relationship modeling, and multi-scale feature fusion methods designed for detailed change localization. The comparison focused on each model’s ability to detect changed regions, preserve boundary details, recognize small changed objects, and generalize across datasets and scenes.
+        </p>
+        <p>
+          Representative models such as ChangeFormer and LeNet were reproduced based on public papers and open-source implementations. A complete experimental workflow was built around datasets such as LEVIR-CD and DSIFN, including image pair organization, label processing, data augmentation, training configuration, inference, and evaluation. The reproduced results were then analyzed across different datasets and scenarios to understand model robustness in building change detection, complex backgrounds, scale variation, and cross-scene transfer.
+        </p>
+        <p>
+          The overall goal was to provide technical evaluation and experimental support for future model selection and business migration. Beyond public benchmark performance, the analysis considered practical deployment factors such as generalization to company-specific data, false positives and false negatives, boundary quality, small-object detection, and engineering cost. This work helped assess whether recent deep learning-based change detection models could be adapted to real GIS and remote sensing product scenarios.
+        </p>
+        </section>
     </main>
   </body>
 </html>
