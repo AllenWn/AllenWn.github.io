@@ -19,18 +19,57 @@
         <p class="detail-meta">Project · Bioimaging · Python · Microscopy</p>
         <h1>CocoFluo Cell Fluorescence Image Analysis System</h1>
         <p class="detail-lead">
-          An automated pipeline for multi-channel fluorescence microscopy image
-          analysis, including segmentation, marker extraction, single-cell
-          expression calls, co-localization statistics, CSV outputs, and visual
-          quality-control samples.
+           Automated bioimage analysis pipeline for confocal microscopy images, including single-cell instance segmentation, fluorescence marker extraction, express-cell quantification, and colocalization analysis at individual cell level.
         </p>
       </header>
       <section class="detail-section">
-        <h2>To Fill Later</h2>
-        <p class="placeholder-note">
-          Add input/output examples, channel configuration, segmentation method,
-          marker thresholds, co-localization logic, result tables, and figures.
+        <h2>Overview</h2>
+        <p>
+          Cocofluo is an automated bioimage analysis pipeline designed for multi-channel confocal fluorescence microscopy images. It treats each segmented cell as an independent analysis unit, allowing fluorescence marker expression and colocalization to be quantified at the single-cell level rather than only at the whole-image level.
         </p>
+
+        <figure class="detail-figure diagram-figure narrow-media">
+          <img
+            class="detail-image"
+            src="../assets/projects/cocofluo_segmentation.png"
+            alt="Segmentation overlay showing instance-level cell detection on a fluorescence microscopy image"
+          >
+          <figcaption>
+            Instance-level segmentation and overlay visualization for fluorescence microscopy input.
+          </figcaption>
+        </figure>
+
+        <h2>Marker Extraction</h2>
+        <p>
+          The pipeline first performs cell instance segmentation using a structural channel such as DAPI or a cell-body channel. For each fluorescence marker channel, it extracts marker-positive regions through configurable thresholding and measures the marker-positive area within each segmented cell. A cell is counted as expressing a marker when the marker-positive area exceeds a defined fraction of the cell area.
+        </p>
+
+        <figure class="detail-figure diagram-figure narrow-media">
+          <img
+            class="detail-image"
+            src="../assets/projects/cocofluo_markerExtraction.png"
+            alt="Marker extraction result showing raw fluorescence marker signal and binary thresholded region"
+          >
+          <figcaption>
+            Marker-channel processing from raw fluorescence signal to binary extracted region.
+          </figcaption>
+        </figure>
+
+        <h2>Single-Cell Quantification</h2>
+        <p>
+          Based on these per-cell measurements, Cocofluo reports the number of detected cells, marker-expressing cells, and cells showing two-way or three-way marker colocalization. The system also generates CSV summaries and quality-control visualizations, including segmentation overlays, marker extraction masks, and highlighted marker-positive cells, making the analysis pipeline easier to inspect and validate.
+        </p>
+
+        <figure class="detail-figure diagram-figure narrow-media">
+          <img
+            class="detail-image"
+            src="../assets/projects/cocofluo_expressCells.png"
+            alt="Highlighted marker-expressing cells after single-cell fluorescence quantification"
+          >
+          <figcaption>
+            Highlighted marker-expressing cells after per-cell quantification and thresholding.
+          </figcaption>
+        </figure>
       </section>
     </main>
   </body>
