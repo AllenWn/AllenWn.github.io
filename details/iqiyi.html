@@ -32,9 +32,40 @@
         <p>
           A major part of the workflow involved preparing pose-conditioned training data from video materials. Human keypoints were extracted from selected video clips using computer vision tools, covering body, face, eye, and mouth landmarks when applicable. The extracted frame-level keypoints were then re-rendered into skeleton-pose videos aligned with the original video timeline, forming paired training samples consisting of text descriptions, original videos, and pose-control videos.
         </p>
+
+        <figure class="detail-figure diagram-figure compact-figure">
+          <img
+            class="detail-image"
+            src="../assets/intern/iqiyi_skeleton.png"
+            alt="Skeleton-pose sequence used as structural control for video generation"
+          >
+          <figcaption>
+            Skeleton-pose control signal used to guide human motion in video generation.
+          </figcaption>
+        </figure>
+
         <p>
           The project aimed to evaluate whether structured visual control signals could improve motion controllability and temporal consistency in text-to-video generation. By combining pose-conditioned data construction with modifications to the OpenSora training and generation pipeline, this work provided early technical validation for AI-assisted video production, character motion control, and controllable media generation applications.
         </p>
+
+        <div class="detail-media-grid video-grid compact-media">
+          <figure>
+            <video class="detail-video" autoplay muted loop playsinline preload="metadata">
+              <source src="../assets/intern/iqiyi_sample_6_step7k.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+              Pose-conditioned video generation sample.
+            </figcaption>
+          </figure>
+          <figure>
+            <video class="detail-video" autoplay muted loop playsinline preload="metadata">
+              <source src="../assets/intern/iqiyi_sample_7_step7k.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+              Additional generated sample from the controllable video pipeline.
+            </figcaption>
+          </figure>
+        </div>
         </section>
     </main>
   </body>

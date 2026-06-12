@@ -29,9 +29,43 @@
         <p>
           The work involved investigating recent deep learning methods for remote sensing change detection and evaluating their potential for integration into practical GIS products. The study covered major modeling paradigms, including Siamese networks for dual-temporal feature extraction, early-fusion architectures for joint image modeling, attention-based and Transformer-based methods for global change relationship modeling, and multi-scale feature fusion methods designed for detailed change localization. The comparison focused on each model’s ability to detect changed regions, preserve boundary details, recognize small changed objects, and generalize across datasets and scenes.
         </p>
+
+        <div class="detail-media-grid diagram-two-up">
+          <figure>
+            <img
+              src="../assets/intern/supermap_pure transformer.png"
+              alt="Pure Transformer architecture for remote sensing image change detection"
+            >
+            <figcaption>
+              Pure Transformer-based architecture for bi-temporal change detection.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../assets/intern/supermap_cnn + transformer.png"
+              alt="Hybrid CNN and Transformer architecture for remote sensing image change detection"
+            >
+            <figcaption>
+              Hybrid CNN and Transformer architecture for remote sensing change detection.
+            </figcaption>
+          </figure>
+        </div>
+
         <p>
           Representative models such as ChangeFormer and LeNet were reproduced based on public papers and open-source implementations. A complete experimental workflow was built around datasets such as LEVIR-CD and DSIFN, including image pair organization, label processing, data augmentation, training configuration, inference, and evaluation. The reproduced results were then analyzed across different datasets and scenarios to understand model robustness in building change detection, complex backgrounds, scale variation, and cross-scene transfer.
         </p>
+
+        <figure class="detail-figure diagram-figure narrow-media">
+          <img
+            class="detail-image"
+            src="../assets/intern/supermap_ChangeFormer.png"
+            alt="ChangeFormer network architecture for change detection"
+          >
+          <figcaption>
+            ChangeFormer architecture studied and reproduced for semantic change detection.
+          </figcaption>
+        </figure>
+
         <p>
           The overall goal was to provide technical evaluation and experimental support for future model selection and business migration. Beyond public benchmark performance, the analysis considered practical deployment factors such as generalization to company-specific data, false positives and false negatives, boundary quality, small-object detection, and engineering cost. This work helped assess whether recent deep learning-based change detection models could be adapted to real GIS and remote sensing product scenarios.
         </p>

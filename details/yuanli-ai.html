@@ -33,6 +33,26 @@
         <p>
           To address this problem, the work adopted a “structured LLM output + programmatic rendering” approach. Instead of asking the model to directly generate final images, the model was trained to produce standardized drawing instructions, structured fields, or constrained rendering code during the reasoning process. These outputs were then parsed by a backend rendering system and converted into visual diagrams using Python-based plotting tools. This made the generated figures more controllable, reproducible, and easier to validate than free-form image generation.
         </p>
+
+        <div class="detail-media-grid demo-video-stack narrow-media">
+          <figure>
+            <video class="detail-video" autoplay muted loop playsinline preload="metadata">
+              <source src="../assets/intern/kanyun_drawing_eval_function_8s.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+              End-to-end generation process for a function-plot visualization task.
+            </figcaption>
+          </figure>
+          <figure>
+            <video class="detail-video" autoplay muted loop playsinline preload="metadata">
+              <source src="../assets/intern/kanyun_drawing_eval_numberline_8s.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+              End-to-end generation process for a number-line visualization task.
+            </figcaption>
+          </figure>
+        </div>
+
         <p>
           The work involved defining the input-output format for math visualization tasks, selecting problem types that benefit from visual explanations, constructing SFT samples from math problems and standard solutions, designing structured drawing fields, and implementing the corresponding rendering pipeline. The resulting workflow connected LLM-based mathematical reasoning with rule-based visual generation, enabling AI-generated solutions to include both explanatory text and accurate supporting diagrams for educational use.
         </p>
