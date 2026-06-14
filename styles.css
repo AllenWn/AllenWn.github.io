@@ -546,6 +546,34 @@ li + li {
   max-width: 520px;
 }
 
+.paragraph-centered-media {
+  max-width: 780px;
+}
+
+.paragraph-centered-media .detail-image,
+.paragraph-centered-media .detail-video {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paragraph-centered-media.diagram-figure .detail-image {
+  width: min(100%, 680px);
+}
+
+.paragraph-centered-media.compact-figure .detail-video {
+  width: min(100%, 520px);
+}
+
+.paragraph-centered-media figcaption {
+  width: min(100%, 680px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paragraph-centered-media.compact-figure figcaption {
+  width: min(100%, 520px);
+}
+
 .detail-media-grid figure {
   margin: 0;
 }
