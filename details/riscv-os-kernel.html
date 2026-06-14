@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RISC-V OS Kernel · Ning Wei</title>
-    <link rel="stylesheet" href="../styles.css?v=20260612">
+    <title>UNIX-Like RISC-V Operating System Kernel · Ning Wei</title>
+    <link rel="stylesheet" href="../styles.css?v=20260614">
   </head>
   <body>
     <header class="site-header">
@@ -16,20 +16,52 @@
     <main class="detail-main">
       <header class="detail-header">
         <a class="back-link" href="../index.html#course-projects">← Back to Course Projects</a>
-        <p class="detail-meta">Course Project · RISC-V · C · Assembly · Operating Systems</p>
-        <h1>Custom RISC-V Operating System Kernel</h1>
+        <p class="detail-meta">Course Project · ECE 391 Computer Systems Engineering · RISC-V · C · Assembly</p>
+        <h1>UNIX-Like RISC-V Operating System Kernel</h1>
         <p class="detail-lead">
-          Implemented a UNIX-like kernel with process creation, ELF loading,
-          system calls, user-level shell, virtual memory, page faults,
-          Copy-on-Write fork, and VirtIO block I/O.
+          Implemented a teaching OS kernel with process creation, ELF loading,
+          system calls, virtual memory, Copy-on-Write fork, and VirtIO-backed
+          persistent storage support.
         </p>
       </header>
       <section class="detail-section">
-        <h2>To Fill Later</h2>
-        <p class="placeholder-note">
-          Add kernel architecture, syscall interface, memory management design,
-          trap handling, COW fork behavior, VirtIO integration, and demos.
+        <h2>Overview</h2>
+        <p>
+          This course project focused on implementing a small UNIX-like
+          operating system kernel on RISC-V. The goal was to understand how core
+          operating-system abstractions are realized in a real kernel, including
+          process management, privilege separation, executable loading, memory
+          isolation, and persistent storage access.
         </p>
+        <p>
+          The kernel supported process creation, ELF loading, system calls, and
+          a user-level shell, while maintaining separation between kernel mode
+          and user mode. A major part of the work involved trap handling and the
+          low-level control flow needed to move safely between user programs and
+          kernel services on the RISC-V architecture.
+        </p>
+        <p>
+          The memory subsystem included page-table management, virtual memory,
+          page faults, and a Copy-on-Write implementation for `fork`, allowing
+          process duplication to be handled more efficiently. The kernel also
+          integrated VirtIO block-device support for persistent storage. Taken
+          together, the project provided a systems-level view of how operating
+          system design decisions connect architecture, memory management, and
+          process execution in a working kernel.
+        </p>
+
+        <figure class="detail-figure diagram-figure narrow-media">
+          <img
+            class="detail-image"
+            src="../assets/projects/risc_V_kernel.png"
+            alt="IDE screenshot showing RISC-V kernel development files, build output, and running shell session"
+          >
+          <figcaption>
+            Development and runtime snapshot showing kernel source layout,
+            build workflow, and the user-space shell running on the RISC-V
+            teaching OS.
+          </figcaption>
+        </figure>
       </section>
     </main>
   </body>

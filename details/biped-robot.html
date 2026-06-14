@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Biped Self-Balancing Robot · Ning Wei</title>
-    <link rel="stylesheet" href="../styles.css?v=20260612">
+    <title>Real-Time Control for a Self-Balancing Biped Robot · Ning Wei</title>
+    <link rel="stylesheet" href="../styles.css?v=20260614">
   </head>
   <body>
     <header class="site-header">
@@ -16,19 +16,64 @@
     <main class="detail-main">
       <header class="detail-header">
         <a class="back-link" href="../index.html#course-projects">← Back to Course Projects</a>
-        <p class="detail-meta">Course Project · Embedded Systems · RTOS · Control</p>
-        <h1>Biped Self-Balancing Robot Control</h1>
+        <p class="detail-meta">Course Project · CS 431 Embedded Systems · C · RTOS · PID</p>
+        <h1>Real-Time Control for a Self-Balancing Biped Robot</h1>
         <p class="detail-lead">
-          Designed an embedded real-time control system for a self-balancing
-          biped robot, coordinating sensor acquisition, attitude estimation,
-          periodic control tasks, filtering, and PID-based motor output.
+          Built an embedded real-time control stack for a self-balancing biped
+          robot, integrating sensing, state estimation, periodic scheduling,
+          filtering, and closed-loop motor actuation.
         </p>
       </header>
       <section class="detail-section">
-        <h2>To Fill Later</h2>
-        <p class="placeholder-note">
-          Add hardware platform, sensor stack, RTOS task design, control loop,
-          filtering, PID tuning, videos, and results.
+        <h2>Overview</h2>
+        <p>
+          This course project focused on the embedded systems and control
+          software required for a self-balancing biped robot. The main challenge
+          was not only to read motion-related sensor data, but also to maintain
+          a stable periodic control loop that could estimate robot posture and
+          respond quickly enough to keep the system balanced under changing
+          physical conditions.
+        </p>
+
+        <div class="detail-media-grid showcase-two-up">
+          <figure>
+            <img
+              src="../assets/projects/biped_rendered.png"
+              alt="Rendered CAD view of the self-balancing biped robot structure"
+            >
+            <figcaption>
+              CAD rendering of the robot structure used to reason about board
+              layout, sensing placement, and mechanical integration.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../assets/projects/biped_photo.png"
+              alt="Assembled self-balancing biped robot prototype"
+            >
+            <figcaption>
+              Assembled prototype used for integrated sensing, control-loop
+              testing, and closed-loop balance experiments.
+            </figcaption>
+          </figure>
+        </div>
+
+        <p>
+          The implementation was organized around real-time tasks for sensor
+          acquisition, state update, control computation, and motor output. IMU,
+          accelerometer, and gyroscope data were processed continuously and
+          combined with filtering methods to improve attitude estimation. This
+          allowed the control software to maintain a more stable representation
+          of robot orientation before generating motor commands.
+        </p>
+        <p>
+          On top of this sensing pipeline, the project used PID-based feedback
+          control to convert posture error into actuator commands. A central
+          engineering goal was to coordinate multiple periodic tasks under fixed
+          timing constraints so that sensing, estimation, and control remained
+          synchronized. The project provided practical experience in embedded
+          scheduling, low-level control software, and the interaction between
+          real-time systems and physical robot dynamics.
         </p>
       </section>
     </main>

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Course &amp; Team Matching Platform · Ning Wei</title>
-    <link rel="stylesheet" href="../styles.css?v=20260612">
+    <title>Cloud-Hosted Course Discovery and Team Matching Platform · Ning Wei</title>
+    <link rel="stylesheet" href="../styles.css?v=20260614">
   </head>
   <body>
     <header class="site-header">
@@ -16,20 +16,71 @@
     <main class="detail-main">
       <header class="detail-header">
         <a class="back-link" href="../index.html#course-projects">← Back to Course Projects</a>
-        <p class="detail-meta">Course Project · FastAPI · MySQL · React · GCP</p>
-        <h1>Course &amp; Team Matching Platform</h1>
+        <p class="detail-meta">Course Project · CS 411 Database Systems · FastAPI · MySQL · React · GCP</p>
+        <h1>Cloud-Hosted Course Discovery and Team Matching Platform</h1>
         <p class="detail-lead">
-          Built a full-stack course discovery and team formation platform with
-          REST APIs, authentication, transactional updates, relational queries,
-          indexes, triggers, and stored procedures.
+          Built a full-stack platform for course search, team formation, and
+          profile management with transactional APIs, relational query
+          optimization, and cloud-hosted MySQL deployment.
         </p>
       </header>
       <section class="detail-section">
-        <h2>To Fill Later</h2>
-        <p class="placeholder-note">
-          Add schema design, API endpoints, matching logic, indexing strategy,
-          triggers/stored procedures, deployment setup, and screenshots.
+        <h2>Overview</h2>
+        <p>
+          This project was designed as a full-stack platform for course
+          discovery and team formation, targeting workflows such as finding
+          classmates in the same course, filtering by availability or interest,
+          and coordinating project-group formation through a structured web
+          application rather than ad hoc messaging.
         </p>
+
+        <p>
+          The backend was implemented with FastAPI and a normalized MySQL schema
+          deployed on Google Cloud SQL. It handled authentication, user-profile
+          management, transactional updates, and matching-related REST APIs. The
+          data model and query layer were central to the project: significant
+          effort went into designing relational schemas, implementing efficient
+          joins and filtering logic, and supporting nontrivial matching queries
+          across user profiles, courses, and availability constraints.
+        </p>
+
+        <figure class="detail-figure diagram-figure narrow-media">
+          <img
+            class="detail-image"
+            src="../assets/projects/team_matchingdata_model.jpg"
+            alt="Entity relationship diagram for the TeamUp course discovery and team matching database schema"
+          >
+          <figcaption>
+            Relational schema spanning terms, courses, sections, users, posts,
+            teams, skills, and match requests for the team-formation workflow.
+          </figcaption>
+        </figure>
+
+        <p>
+          Beyond basic CRUD functionality, the system incorporated indexing,
+          triggers, and stored procedures to improve performance and support
+          database-driven logic for filtering and matching. A modular React
+          frontend completed the end-to-end workflow, turning the project into a
+          practical example of combining cloud-hosted databases, API design, and
+          query-oriented system thinking in a usable team-formation product.
+        </p>
+
+        <figure class="detail-figure narrow-media">
+          <video
+            class="detail-video"
+            src="../assets/projects/team_matching_demo_web.mp4"
+            poster="../assets/projects/team_matching_demo_poster.jpg"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          ></video>
+          <figcaption>
+            Product demo of the TeamUp interface for browsing courses, viewing
+            project posts, and navigating the core matching workflow.
+          </figcaption>
+        </figure>
       </section>
     </main>
   </body>

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FPGA HDMI Graphics Game · Ning Wei</title>
-    <link rel="stylesheet" href="../styles.css?v=20260612">
+    <title>FPGA HDMI Graphics Engine and Game System · Ning Wei</title>
+    <link rel="stylesheet" href="../styles.css?v=20260614">
   </head>
   <body>
     <header class="site-header">
@@ -16,20 +16,70 @@
     <main class="detail-main">
       <header class="detail-header">
         <a class="back-link" href="../index.html#course-projects">← Back to Course Projects</a>
-        <p class="detail-meta">Course Project · FPGA · SystemVerilog · C · MicroBlaze</p>
-        <h1>FPGA-Based HDMI Graphics Gaming System</h1>
+        <p class="detail-meta">Course Project · ECE 385 Digital Systems Laboratory · FPGA · SystemVerilog · MicroBlaze</p>
+        <h1>FPGA HDMI Graphics Engine and Game System</h1>
         <p class="detail-lead">
-          Designed a real-time 640x480 HDMI graphics pipeline in SystemVerilog
-          with tile rendering, sprite overlay, obstacle scrolling, and
-          MicroBlaze-controlled game logic.
+          Implemented a 640x480 HDMI graphics pipeline in SystemVerilog with
+          tile rendering, sprite compositing, obstacle scrolling, and a
+          MicroBlaze-driven gameplay runtime in C.
         </p>
       </header>
       <section class="detail-section">
-        <h2>To Fill Later</h2>
-        <p class="placeholder-note">
-          Add display pipeline architecture, memory map, AXI4-Lite interface,
-          sprite/tile renderer, timing constraints, and gameplay demo.
+        <h2>Overview</h2>
+        <p>
+          This project explored how to build an interactive graphics system on
+          FPGA hardware under strict real-time video timing constraints. Rather
+          than treating the project as only game logic or only digital design,
+          the work combined a hardware display pipeline with a software runtime
+          running on a soft-core processor.
         </p>
+
+        <figure class="detail-figure diagram-figure centered-figure">
+          <img
+            class="detail-image"
+            src="../assets/projects/fpga_block_diagram.png"
+            alt="Block diagram of the FPGA HDMI game system showing MicroBlaze, graphics engine, display pipeline, and audio path"
+          >
+          <figcaption>
+            System-level architecture connecting the MicroBlaze runtime,
+            graphics engine IP, HDMI output path, keyboard input, and audio
+            peripherals.
+          </figcaption>
+        </figure>
+
+        <p>
+          On the hardware side, the system used SystemVerilog to implement a
+          real-time HDMI graphics pipeline for 640x480 output. The rendering
+          path included tile-based background drawing, sprite overlay, and
+          obstacle scrolling, all coordinated under video timing requirements so
+          that pixels were produced in the correct order at display rate.
+        </p>
+        <p>
+          On the software side, game logic ran in C on a MicroBlaze soft-core
+          processor. That runtime handled world-state updates, player movement,
+          collision detection, and USB keyboard input, then communicated with
+          custom hardware graphics modules through AXI4-Lite memory-mapped
+          registers. The project was a practical exercise in hardware/software
+          co-design, where visual output, gameplay responsiveness, and register
+          interface design all had to work together as one system.
+        </p>
+
+        <figure class="detail-figure compact-figure centered-figure">
+          <video
+            class="detail-video medium-ratio"
+            src="../assets/projects/fpga_demo_web.mp4"
+            poster="../assets/projects/fpga_demo_poster.jpg"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          ></video>
+          <figcaption>
+            Recorded HDMI gameplay output showing the side-scrolling graphics
+            pipeline and game runtime operating together on the FPGA system.
+          </figcaption>
+        </figure>
       </section>
     </main>
   </body>
