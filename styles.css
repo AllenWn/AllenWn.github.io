@@ -217,11 +217,14 @@ h3 {
 }
 
 .entry {
+  position: relative;
   display: grid;
   grid-template-columns: 230px minmax(0, 1fr);
   gap: 36px;
   padding: 28px 0;
   border-top: 0;
+  border-radius: 8px;
+  transition: background-color 180ms ease, box-shadow 180ms ease;
 }
 
 .entry + .entry {
@@ -242,6 +245,41 @@ h3 {
 
 .title-link:hover {
   color: var(--link-hover);
+}
+
+.stretched-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.publication,
+.compact-entry,
+.project-card {
+  position: relative;
+}
+
+.publication,
+.entry,
+.compact-entry,
+.project-card {
+  cursor: pointer;
+}
+
+.publication:hover,
+.entry:hover,
+.compact-entry:hover,
+.project-card:hover {
+  background: rgba(246, 248, 251, 0.82);
+}
+
+.publication a:not(.stretched-link),
+.entry a:not(.stretched-link),
+.compact-entry a:not(.stretched-link),
+.project-card a:not(.stretched-link) {
+  position: relative;
+  z-index: 2;
 }
 
 .entry-meta p,
@@ -323,6 +361,8 @@ li + li {
 .compact-entry {
   padding-bottom: 22px;
   border-bottom: 1px solid var(--soft-line);
+  border-radius: 8px;
+  transition: background-color 180ms ease;
 }
 
 .compact-entry:last-child {
@@ -378,6 +418,18 @@ li + li {
   border: 1px solid var(--soft-line);
   border-radius: 8px;
   background: #fff;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.project-card:hover {
+  border-color: rgba(26, 95, 180, 0.16);
+  box-shadow: 0 12px 28px rgba(22, 34, 51, 0.05);
+}
+
+.publication:hover,
+.entry:hover,
+.compact-entry:hover {
+  box-shadow: inset 0 0 0 1px rgba(26, 95, 180, 0.06);
 }
 
 .project-card h3 {
